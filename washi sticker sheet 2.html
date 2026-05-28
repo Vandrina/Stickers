@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Washi & Fold Tab Sticker Sheet</title>
+<style>
+
+  @page {
+    size: 150mm 215mm;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 150mm;
+    height: 215mm;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sheet {
+    width: 150mm;
+    height: 215mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .sheet-label {
+    height: 5mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 4.5pt;
+    letter-spacing: 0.8pt;
+    color: #bbb;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  .grid-area {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    border: 0.4pt solid #c0c0c0;
+    position: relative;
+  }
+
+  .washi-section {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    height: 100%;
+  }
+
+  .washi-strip {
+    width: 15mm;
+    height: 100%;
+    border-right: 0.4pt solid #c0c0c0;
+    position: relative;
+    overflow: hidden;
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 3.5mm,
+        rgba(200,200,200,0.18) 3.5mm,
+        rgba(200,200,200,0.18) 4mm
+      );
+  }
+
+  .washi-strip:last-child {
+    border-right: none;
+  }
+
+  .washi-strip:first-child::after {
+    content: '15mm washi';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 4.5pt;
+    letter-spacing: 0.6pt;
+    color: #ccc;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .divider {
+    width: 0;
+    border-left: 0.8pt solid #a0a0a0;
+    flex-shrink: 0;
+  }
+
+  .tabs-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .tab-row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 0.4pt solid #c0c0c0;
+  }
+
+  .tab-row:last-child {
+    border-bottom: none;
+  }
+
+  .tab {
+    flex: 1;
+    height: 100%;
+    border-right: 0.4pt solid #c0c0c0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tab:last-child {
+    border-right: none;
+  }
+
+  .fold-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    border-top: 0.7pt dashed #888;
+    pointer-events: none;
+  }
+
+  .fold-line::before,
+  .fold-line::after {
+    content: '';
+    position: absolute;
+    top: -1.5mm;
+    width: 0;
+    height: 3mm;
+    border-left: 0.5pt solid #aaa;
+  }
+  .fold-line::before { left: 0; }
+  .fold-line::after  { right: 0; }
+
+  .fold-label {
+    position: absolute;
+    right: 1.2mm;
+    top: calc(50% + 0.8mm);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 4pt;
+    letter-spacing: 0.5pt;
+    color: #ccc;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .tab-row:first-child .tab:first-child {
+    background: linear-gradient(
+      to bottom,
+      rgba(220,220,220,0.25) 0%,
+      rgba(220,220,220,0.25) 50%,
+      transparent 50%
+    );
+  }
+
+  .crop {
+    position: absolute;
+    width: 3mm;
+    height: 3mm;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .crop-tl { top: 0;    left: 0;    border-top: 0.4pt solid #999; border-left: 0.4pt solid #999; }
+  .crop-tr { top: 0;    right: 0;   border-top: 0.4pt solid #999; border-right: 0.4pt solid #999; }
+  .crop-bl { bottom: 0; left: 0;    border-bottom: 0.4pt solid #999; border-left: 0.4pt solid #999; }
+  .crop-br { bottom: 0; right: 0;   border-bottom: 0.4pt solid #999; border-right: 0.4pt solid #999; }
+
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <div class="grid-area" id="gridArea">
+    <div class="crop crop-tl"></div>
+    <div class="crop crop-tr"></div>
+    <div class="crop crop-bl"></div>
+    <div class="crop crop-br"></div>
+
+    <div class="washi-section" id="washiSection"></div>
+    <div class="divider"></div>
+    <div class="tabs-section" id="tabsSection"></div>
+  </div>
+
+  <div class="sheet-label">
+    washi 15 × 210 mm · 5 strips &ensp;|&ensp; fold tabs 30 mm, score @ 15 mm · 21 tabs
+  </div>
+
+</div>
+
+<script>
+  const washiSection = document.getElementById('washiSection');
+  for (let i = 0; i < 5; i++) {
+    const strip = document.createElement('div');
+    strip.className = 'washi-strip';
+    washiSection.appendChild(strip);
+  }
+
+  const tabsSection = document.getElementById('tabsSection');
+  for (let r = 0; r < 7; r++) {
+    const row = document.createElement('div');
+    row.className = 'tab-row';
+    for (let c = 0; c < 3; c++) {
+      const tab = document.createElement('div');
+      tab.className = 'tab';
+      const foldLine = document.createElement('div');
+      foldLine.className = 'fold-line';
+      if (r === 0 && c === 0) {
+        const label = document.createElement('span');
+        label.className = 'fold-label';
+        label.textContent = 'fold';
+        tab.appendChild(label);
+      }
+      tab.appendChild(foldLine);
+      row.appendChild(tab);
+    }
+    tabsSection.appendChild(row);
+  }
+</script>
+
+</body>
+</html>
