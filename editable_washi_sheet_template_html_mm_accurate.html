@@ -19,17 +19,18 @@
     margin: 0 auto 40px auto;
     box-shadow: 0 0 12px rgba(0,0,0,0.12);
     overflow: hidden;
+    box-sizing: border-box;
   }
 
   /* Final trim area */
   .trim {
     position: absolute;
+    /* centered oversized-B5 cut area INSIDE letter sheet */
     left: 16.95mm;
     top: 11.2mm;
     width: 182mm;
     height: 257mm;
-    /* oversized B5 final cut area centered inside US Letter */
-    border: 1px dashed #8f68d8;
+    border: 1mm dashed #8f68d8;
     box-sizing: border-box;
   }
 
@@ -177,10 +178,10 @@
 <!-- PAGE 1 -->
 <div class="page">
 
-  <div class="page-title">WASHI SHEET TEMPLATE · PAGE 1</div>
+  <div class="page-title" style="top:1mm; font-size:3.5mm;">WASHI SHEET TEMPLATE · PAGE 1</div>
 
   <!-- OUTER LETTER PAGE BORDER -->
-  <div style="position:absolute; left:0; top:0; width:215.9mm; height:279.4mm; border:0.6mm solid #444; box-sizing:border-box;"></div>
+  <div style="position:absolute; left:0; top:0; width:215.9mm; height:279.4mm; border:0.8mm solid #444; box-sizing:border-box; z-index:1;"></div>
 
   <!-- FINAL CUT AREA -->
 
@@ -191,10 +192,11 @@
 
   <div class="trim"></div>
 
-  <div class="label" style="top: 12mm; left: 18mm; line-height:1.4;">
-    PRINT AREA: US LETTER · 215.9mm × 279.4mm<br>
-    INNER DASHED LINE = FINAL CUT SIZE<br>
-    FINAL SHEET AFTER CUT: 182mm × 257mm
+  <div class="label" style="top: 4mm; left: 10mm; line-height:1.35; background:white; padding:1mm 2mm; max-width:70mm; z-index:20;">
+    OUTER SOLID BORDER = LETTER SIZE PRINT SHEET<br>
+    215.9mm × 279.4mm<br><br>
+    INNER DASHED BORDER = FINAL CUT SIZE<br>
+    182mm × 257mm
   </div>
 
   <!-- FULL WASHI
@@ -203,7 +205,7 @@
        total used width = 100mm
        designed to prioritize full-length vertical washi on left half of page
   -->
-  <div class="washi-column">
+  <div class="washi-column" style="z-index:2;">
     <div class="washi-strip"><span>15mm × 250mm</span></div>
     <div class="washi-strip"><span>15mm × 250mm</span></div>
     <div class="washi-strip"><span>15mm × 250mm</span></div>
@@ -213,7 +215,7 @@
   </div>
 
   <!-- RIGHT SIDE -->
-  <div class="right-panel">
+  <div class="right-panel" style="z-index:2;">
 
     <div class="tab-grid">
       <div class="tab">
@@ -267,10 +269,10 @@
 <!-- PAGE 2 -->
 <div class="page">
 
-  <div class="page-title">WASHI SHEET TEMPLATE · PAGE 2</div>
+  <div class="page-title" style="top:1mm; font-size:3.5mm;">WASHI SHEET TEMPLATE · PAGE 2</div>
 
   <!-- OUTER LETTER PAGE BORDER -->
-  <div style="position:absolute; left:0; top:0; width:215.9mm; height:279.4mm; border:0.6mm solid #444; box-sizing:border-box;"></div>
+  <div style="position:absolute; left:0; top:0; width:215.9mm; height:279.4mm; border:0.8mm solid #444; box-sizing:border-box; z-index:1;"></div>
 
   <!-- FINAL CUT AREA -->
 
@@ -281,10 +283,11 @@
 
   <div class="trim"></div>
 
-  <div class="label" style="top: 12mm; left: 18mm; line-height:1.4;">
-    PRINT AREA: US LETTER · 215.9mm × 279.4mm<br>
-    INNER DASHED LINE = FINAL CUT SIZE<br>
-    FINAL SHEET AFTER CUT: 182mm × 257mm
+  <div class="label" style="top: 4mm; left: 10mm; line-height:1.35; background:white; padding:1mm 2mm; max-width:70mm; z-index:20;">
+    OUTER SOLID BORDER = LETTER SIZE PRINT SHEET<br>
+    215.9mm × 279.4mm<br><br>
+    INNER DASHED BORDER = FINAL CUT SIZE<br>
+    182mm × 257mm
   </div>
 
   <!-- FULL WASHI
@@ -293,7 +296,7 @@
        total used width = 100mm
        designed to prioritize full-length vertical washi on left half of page
   -->
-  <div class="washi-column">
+  <div class="washi-column" style="z-index:2;">
     <div class="washi-strip"><span>15mm × 250mm</span></div>
     <div class="washi-strip"><span>15mm × 250mm</span></div>
     <div class="washi-strip"><span>15mm × 250mm</span></div>
@@ -303,7 +306,7 @@
   </div>
 
   <!-- RIGHT SIDE VARIANT -->
-  <div class="right-panel">
+  <div class="right-panel" style="z-index:2;">
 
     <div class="tab-grid">
       <div class="tab">
