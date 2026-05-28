@@ -175,10 +175,10 @@
 </head>
 <body>
 
-<!-- PAGE 1 -->
+<!-- SINGLE PAGE TEMPLATE -->
 <div class="page">
 
-  <div class="page-title" style="top:1mm; font-size:3.5mm;">WASHI SHEET TEMPLATE · PAGE 1</div>
+  <div class="page-title" style="top:1mm; font-size:3.5mm;">WASHI SHEET TEMPLATE</div>
 
   <!-- OUTER LETTER PAGE BORDER -->
   <div style="position:absolute; left:0; top:0; width:215.9mm; height:279.4mm; border:0.8mm solid #444; box-sizing:border-box; z-index:1;"></div>
@@ -203,118 +203,7 @@
        6 strips × 15mm wide
        5 gaps × 2mm
        total used width = 100mm
-       strip height intentionally matches B5 height (250mm), not Letter height
-       designed to prioritize full-length vertical washi on left half of page
-  -->
-  <div class="washi-column" style="z-index:2; height:210mm;">
-    <div class="washi-strip"><span>15mm × 210mm</span></div>
-    <div class="washi-strip"><span>15mm × 210mm</span></div>
-    <div class="washi-strip"><span>15mm × 210mm</span></div>
-    <div class="washi-strip"><span>15mm × 210mm</span></div>
-    <div class="washi-strip"><span>15mm × 210mm</span></div>
-    <div class="washi-strip"><span>15mm × 210mm</span></div>
-  </div>
-
-  <!-- RIGHT SIDE -->
-  <div class="right-panel" style="z-index:2;">
-
-    <div class="tab-grid">
-      <div class="tab">
-        <div class="score"></div>
-        <div class="tab-label">30mm × 30mm</div>
-      </div>
-
-      <div class="tab">
-        <div class="score"></div>
-        <div class="tab-label">30mm × 30mm</div>
-      </div>
-
-      <div class="tab">
-        <div class="score"></div>
-        <div class="tab-label">30mm × 30mm</div>
-      </div>
-
-      <div class="tab">
-        <div class="score"></div>
-        <div class="tab-label">30mm × 30mm</div>
-      </div>
-    </div>
-
-    <div class="short-strip" style="width: 64mm; height: 30mm;">
-      <span>30mm × 64mm</span>
-    </div>
-
-    <div class="short-strip" style="width: 64mm; height: 30mm;">
-      <span>30mm × 64mm</span>
-    </div>
-
-    <div class="short-strip" style="width: 64mm; height: 22mm;">
-      <span>22mm × 64mm</span>
-    </div>
-
-    <div class="short-strip" style="width: 64mm; height: 22mm;">
-      <span>22mm × 64mm</span>
-    </div>
-
-    <div class="short-strip" style="width: 64mm; height: 15mm;">
-      <span>15mm × 64mm</span>
-    </div>
-
-    <div class="short-strip" style="width: 64mm; height: 15mm;">
-      <span>15mm × 64mm</span>
-    </div>
-
-    <div class="short-strip" style="width: 57mm; height: 10mm;">
-      <span>10mm × 58mm</span>
-    </div>
-
-    <div class="short-strip" style="width: 64mm; height: 22mm;">
-      <span>22mm × 64mm</span>
-    </div>
-
-    <div class="short-strip" style="width: 64mm; height: 22mm;">
-      <span>22mm × 64mm</span>
-    </div>
-
-    <div class="short-strip" style="width: 64mm; height: 15mm;">
-      <span>15mm × 64mm</span>
-    </div>
-
-    <div class="short-strip" style="width: 64mm; height: 15mm;">
-      <span>15mm × 64mm</span>
-    </div>
-
-  </div>
-</div>
-
-<!-- PAGE 2 -->
-<div class="page">
-
-  <div class="page-title" style="top:1mm; font-size:3.5mm;">WASHI SHEET TEMPLATE · PAGE 2</div>
-
-  <!-- OUTER LETTER PAGE BORDER -->
-  <div style="position:absolute; left:0; top:0; width:215.9mm; height:279.4mm; border:0.8mm solid #444; box-sizing:border-box; z-index:1;"></div>
-
-  <!-- FINAL CUT AREA -->
-
-  <div class="crop tl"></div>
-  <div class="crop tr"></div>
-  <div class="crop bl"></div>
-  <div class="crop br"></div>
-
-  <div class="trim"></div>
-
-  <div class="label" style="top: 4mm; left: 10mm; line-height:1.35; background:white; padding:1mm 2mm; max-width:70mm; z-index:20;">
-    OUTER SOLID BORDER = LETTER SIZE PRINT SHEET<br>
-    215.9mm × 279.4mm<br><br>
-    INNER DASHED BORDER = FINAL CUT SIZE<br>
-    182mm × 257mm
-  </div>
-
-  <!-- FULL WASHI
-       6 strips × 15mm wide
-       5 gaps × 2mm
-       total used width = 100mm
+       visual width ratio confirmed against 30mm tabs and 64mm short strips
        designed to prioritize full-length vertical washi on left half of page
   -->
   <div class="washi-column" style="z-index:2; height:210mm;">
@@ -327,7 +216,7 @@
   </div>
 
   <!-- RIGHT SIDE VARIANT -->
-  <div class="right-panel" style="z-index:2;">
+  <div class="right-panel" style="z-index:2; top:28mm;">
 
     <div class="tab-grid">
       <div class="tab">
@@ -375,18 +264,22 @@
       <span>22mm × 64mm</span>
     </div>
 
-    <div class="short-strip" style="width: 64mm; height: 10mm;">
-      <span>10mm × 64mm</span>
-    </div>
-
-    <div class="short-strip" style="width: 64mm; height: 10mm;">
-      <span>10mm × 64mm</span>
-    </div>
+    
 
   </div>
 
   </div>
 </div>
+
+<!--
+VISUAL SIZE CONFIRMATION
+
+15mm vertical washi:
+- exactly half the width of the 30mm fold tabs
+- approximately 23% of the width of the 64mm short strips
+- all widths are mathematically defined in mm units via CSS
+- browser print scaling must be disabled for true-size output
+-->
 
 </body>
 </html>
