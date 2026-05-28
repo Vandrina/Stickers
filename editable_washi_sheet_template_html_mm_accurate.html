@@ -39,34 +39,6 @@
     color: #333;
   }
 
-  .crop {
-    position: absolute;
-    width: 6mm;
-    height: 6mm;
-  }
-
-  .crop::before,
-  .crop::after {
-    content: "";
-    position: absolute;
-    background: #444;
-  }
-
-  .crop::before {
-    width: 6mm;
-    height: 0.3mm;
-  }
-
-  .crop::after {
-    width: 0.3mm;
-    height: 6mm;
-  }
-
-  .tl { top: 6mm; left: 6mm; }
-  .tr { top: 6mm; right: 6mm; transform: scaleX(-1); }
-  .bl { bottom: 6mm; left: 6mm; transform: scaleY(-1); }
-  .br { bottom: 6mm; right: 6mm; transform: scale(-1); }
-
   .washi-column {
     position: absolute;
     left: 15mm;
@@ -99,7 +71,7 @@
   .right-panel {
     position: absolute;
     left: 92mm;
-    top: 18mm;
+    top: 20mm;
     width: 64mm;
     height: 210mm; 
     display: flex;
@@ -147,7 +119,6 @@
   .short-strip {
     background: #ece9f6;
     border: 0.3mm solid #c9c3dc;
-    margin-bottom: 3mm;
     position: relative;
     box-sizing: border-box;
   }
@@ -184,10 +155,7 @@
 
   <!-- FINAL CUT AREA -->
 
-  <div class="crop tl"></div>
-  <div class="crop tr"></div>
-  <div class="crop bl"></div>
-  <div class="crop br"></div>
+
 
   <div class="trim"></div>
 
@@ -199,7 +167,7 @@
   </div>
 
   <!-- RIGHT SIDE VARIANT -->
-  <div class="right-panel" style="z-index:2; top:20mm;">
+  <div class="right-panel">
 
     <div class="tab-grid">
       <div class="tab">
