@@ -102,19 +102,25 @@
     top: 18mm;
     width: 58mm;
     height: 250mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4mm;
+    box-sizing: border-box;
   }
 
   .tab-grid {
     display: grid;
-    grid-template-columns: repeat(2, 30mm);
-    gap: 4mm;
+    grid-template-columns: repeat(2, 27mm);
+    gap: 3mm;
     justify-content: start;
-    margin-bottom: 8mm;
+    width: 57mm;
+    box-sizing: border-box;
   }
 
   .tab {
-    width: 30mm;
-    height: 30mm;
+    width: 27mm;
+    height: 27mm;
     background: #ece9f6;
     border: 0.3mm solid #c9c3dc;
     position: relative;
@@ -123,7 +129,7 @@
 
   .score {
     position: absolute;
-    left: 15mm;
+    left: 13.5mm;
     top: 0;
     width: 0;
     height: 100%;
@@ -173,6 +179,11 @@
 
   <div class="page-title">WASHI SHEET TEMPLATE · PAGE 1</div>
 
+  <!-- OUTER LETTER PAGE BORDER -->
+  <div style="position:absolute; left:0; top:0; width:215.9mm; height:279.4mm; border:0.6mm solid #444; box-sizing:border-box;"></div>
+
+  <!-- FINAL CUT AREA -->
+
   <div class="crop tl"></div>
   <div class="crop tr"></div>
   <div class="crop bl"></div>
@@ -181,8 +192,9 @@
   <div class="trim"></div>
 
   <div class="label" style="top: 12mm; left: 18mm; line-height:1.4;">
-    PRINT SHEET: US LETTER · 215.9mm × 279.4mm<br>
-    CUT DOWN TO: 182mm × 257mm
+    PRINT AREA: US LETTER · 215.9mm × 279.4mm<br>
+    INNER DASHED LINE = FINAL CUT SIZE<br>
+    FINAL SHEET AFTER CUT: 182mm × 257mm
   </div>
 
   <!-- FULL WASHI
@@ -206,46 +218,46 @@
     <div class="tab-grid">
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">30mm × 30mm</div>
+        <div class="tab-label">27mm × 27mm</div>
       </div>
 
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">30mm × 30mm</div>
+        <div class="tab-label">27mm × 27mm</div>
       </div>
 
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">30mm × 30mm</div>
+        <div class="tab-label">27mm × 27mm</div>
       </div>
 
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">30mm × 30mm</div>
+        <div class="tab-label">27mm × 27mm</div>
       </div>
     </div>
 
-    <div class="short-strip" style="width: 58mm; height: 30mm;">
+    <div class="short-strip" style="width: 57mm; height: 30mm;">
       <span>30mm × 58mm</span>
     </div>
 
-    <div class="short-strip" style="width: 58mm; height: 22mm;">
+    <div class="short-strip" style="width: 57mm; height: 22mm;">
       <span>22mm × 58mm</span>
     </div>
 
-    <div class="short-strip" style="width: 58mm; height: 15mm;">
+    <div class="short-strip" style="width: 57mm; height: 15mm;">
       <span>15mm × 58mm</span>
     </div>
 
-    <div class="short-strip" style="width: 58mm; height: 10mm;">
+    <div class="short-strip" style="width: 57mm; height: 10mm;">
       <span>10mm × 58mm</span>
     </div>
 
-    <div class="short-strip" style="width: 58mm; height: 22mm;">
+    <div class="short-strip" style="width: 57mm; height: 22mm;">
       <span>22mm × 58mm</span>
     </div>
 
-    <div class="short-strip" style="width: 58mm; height: 15mm;">
+    <div class="short-strip" style="width: 57mm; height: 15mm;">
       <span>15mm × 58mm</span>
     </div>
 
@@ -257,6 +269,11 @@
 
   <div class="page-title">WASHI SHEET TEMPLATE · PAGE 2</div>
 
+  <!-- OUTER LETTER PAGE BORDER -->
+  <div style="position:absolute; left:0; top:0; width:215.9mm; height:279.4mm; border:0.6mm solid #444; box-sizing:border-box;"></div>
+
+  <!-- FINAL CUT AREA -->
+
   <div class="crop tl"></div>
   <div class="crop tr"></div>
   <div class="crop bl"></div>
@@ -265,8 +282,9 @@
   <div class="trim"></div>
 
   <div class="label" style="top: 12mm; left: 18mm; line-height:1.4;">
-    PRINT SHEET: US LETTER · 215.9mm × 279.4mm<br>
-    CUT DOWN TO: 182mm × 257mm
+    PRINT AREA: US LETTER · 215.9mm × 279.4mm<br>
+    INNER DASHED LINE = FINAL CUT SIZE<br>
+    FINAL SHEET AFTER CUT: 182mm × 257mm
   </div>
 
   <!-- FULL WASHI
@@ -290,34 +308,34 @@
     <div class="tab-grid">
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">30mm × 30mm</div>
+        <div class="tab-label">27mm × 27mm</div>
       </div>
 
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">30mm × 30mm</div>
+        <div class="tab-label">27mm × 27mm</div>
       </div>
 
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">30mm × 30mm</div>
+        <div class="tab-label">27mm × 27mm</div>
       </div>
 
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">30mm × 30mm</div>
+        <div class="tab-label">27mm × 27mm</div>
       </div>
     </div>
 
-    <div class="short-strip" style="width: 58mm; height: 30mm;">
+    <div class="short-strip" style="width: 57mm; height: 30mm;">
       <span>30mm × 58mm</span>
     </div>
 
-    <div class="short-strip" style="width: 58mm; height: 22mm;">
+    <div class="short-strip" style="width: 57mm; height: 22mm;">
       <span>22mm × 58mm</span>
     </div>
 
-    <div class="short-strip" style="width: 58mm; height: 22mm;">
+    <div class="short-strip" style="width: 57mm; height: 22mm;">
       <span>22mm × 58mm</span>
     </div>
 
