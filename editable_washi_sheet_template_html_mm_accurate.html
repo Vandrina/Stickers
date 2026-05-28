@@ -73,14 +73,14 @@
     left: 22mm;
     top: 18mm;
     width: 102mm;
-    height: 250mm;
+    height: 250mm; /* true B5 height */
     display: flex;
     gap: 2mm;
   }
 
   .washi-strip {
     width: 15mm;
-    height: 250mm;
+    height: 250mm; /* true B5 height */
     background: #ece9f6;
     border: 0.3mm solid #c9c3dc;
     box-sizing: border-box;
@@ -99,10 +99,10 @@
 
   .right-panel {
     position: absolute;
-    left: 132mm;
+    left: 128mm;
     top: 18mm;
-    width: 58mm;
-    height: 250mm;
+    width: 64mm;
+    height: 250mm; /* true B5 height */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -112,16 +112,16 @@
 
   .tab-grid {
     display: grid;
-    grid-template-columns: repeat(2, 27mm);
+    grid-template-columns: repeat(2, 30mm);
     gap: 3mm;
     justify-content: start;
-    width: 57mm;
+    width: 64mm;
     box-sizing: border-box;
   }
 
   .tab {
-    width: 27mm;
-    height: 27mm;
+    width: 30mm;
+    height: 30mm;
     background: #ece9f6;
     border: 0.3mm solid #c9c3dc;
     position: relative;
@@ -130,7 +130,7 @@
 
   .score {
     position: absolute;
-    left: 13.5mm;
+    left: 15mm;
     top: 0;
     width: 0;
     height: 100%;
@@ -203,15 +203,16 @@
        6 strips × 15mm wide
        5 gaps × 2mm
        total used width = 100mm
+       strip height intentionally matches B5 height (250mm), not Letter height
        designed to prioritize full-length vertical washi on left half of page
   -->
   <div class="washi-column" style="z-index:2;">
-    <div class="washi-strip"><span>15mm × 250mm</span></div>
-    <div class="washi-strip"><span>15mm × 250mm</span></div>
-    <div class="washi-strip"><span>15mm × 250mm</span></div>
-    <div class="washi-strip"><span>15mm × 250mm</span></div>
-    <div class="washi-strip"><span>15mm × 250mm</span></div>
-    <div class="washi-strip"><span>15mm × 250mm</span></div>
+    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
+    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
+    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
+    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
+    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
+    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
   </div>
 
   <!-- RIGHT SIDE -->
@@ -220,22 +221,22 @@
     <div class="tab-grid">
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">27mm × 27mm</div>
+        <div class="tab-label">30mm × 30mm</div>
       </div>
 
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">27mm × 27mm</div>
+        <div class="tab-label">30mm × 30mm</div>
       </div>
 
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">27mm × 27mm</div>
+        <div class="tab-label">30mm × 30mm</div>
       </div>
 
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">27mm × 27mm</div>
+        <div class="tab-label">30mm × 30mm</div>
       </div>
     </div>
 
@@ -297,12 +298,12 @@
        designed to prioritize full-length vertical washi on left half of page
   -->
   <div class="washi-column" style="z-index:2;">
-    <div class="washi-strip"><span>15mm × 250mm</span></div>
-    <div class="washi-strip"><span>15mm × 250mm</span></div>
-    <div class="washi-strip"><span>15mm × 250mm</span></div>
-    <div class="washi-strip"><span>15mm × 250mm</span></div>
-    <div class="washi-strip"><span>15mm × 250mm</span></div>
-    <div class="washi-strip"><span>15mm × 250mm</span></div>
+    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
+    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
+    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
+    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
+    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
+    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
   </div>
 
   <!-- RIGHT SIDE VARIANT -->
@@ -311,22 +312,22 @@
     <div class="tab-grid">
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">27mm × 27mm</div>
+        <div class="tab-label">30mm × 30mm</div>
       </div>
 
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">27mm × 27mm</div>
+        <div class="tab-label">30mm × 30mm</div>
       </div>
 
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">27mm × 27mm</div>
+        <div class="tab-label">30mm × 30mm</div>
       </div>
 
       <div class="tab">
         <div class="score"></div>
-        <div class="tab-label">27mm × 27mm</div>
+        <div class="tab-label">30mm × 30mm</div>
       </div>
     </div>
 
