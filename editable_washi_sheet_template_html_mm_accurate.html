@@ -73,14 +73,14 @@
     left: 22mm;
     top: 18mm;
     width: 102mm;
-    height: 250mm; /* true B5 height */
+    height: 210mm; /* reduced washi height */
     display: flex;
     gap: 2mm;
   }
 
   .washi-strip {
     width: 15mm;
-    height: 250mm; /* true B5 height */
+    height: 210mm; /* reduced washi height */
     background: #ece9f6;
     border: 0.3mm solid #c9c3dc;
     box-sizing: border-box;
@@ -102,7 +102,7 @@
     left: 128mm;
     top: 18mm;
     width: 64mm;
-    height: 250mm; /* true B5 height */
+    height: 210mm; /* reduced washi height */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -206,13 +206,13 @@
        strip height intentionally matches B5 height (250mm), not Letter height
        designed to prioritize full-length vertical washi on left half of page
   -->
-  <div class="washi-column" style="z-index:2;">
-    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
-    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
-    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
-    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
-    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
-    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
+  <div class="washi-column" style="z-index:2; height:210mm;">
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
   </div>
 
   <!-- RIGHT SIDE -->
@@ -240,28 +240,48 @@
       </div>
     </div>
 
-    <div class="short-strip" style="width: 57mm; height: 30mm;">
-      <span>30mm × 58mm</span>
+    <div class="short-strip" style="width: 64mm; height: 30mm;">
+      <span>30mm × 64mm</span>
     </div>
 
-    <div class="short-strip" style="width: 57mm; height: 22mm;">
-      <span>22mm × 58mm</span>
+    <div class="short-strip" style="width: 64mm; height: 30mm;">
+      <span>30mm × 64mm</span>
     </div>
 
-    <div class="short-strip" style="width: 57mm; height: 15mm;">
-      <span>15mm × 58mm</span>
+    <div class="short-strip" style="width: 64mm; height: 22mm;">
+      <span>22mm × 64mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 64mm; height: 22mm;">
+      <span>22mm × 64mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 64mm; height: 15mm;">
+      <span>15mm × 64mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 64mm; height: 15mm;">
+      <span>15mm × 64mm</span>
     </div>
 
     <div class="short-strip" style="width: 57mm; height: 10mm;">
       <span>10mm × 58mm</span>
     </div>
 
-    <div class="short-strip" style="width: 57mm; height: 22mm;">
-      <span>22mm × 58mm</span>
+    <div class="short-strip" style="width: 64mm; height: 22mm;">
+      <span>22mm × 64mm</span>
     </div>
 
-    <div class="short-strip" style="width: 57mm; height: 15mm;">
-      <span>15mm × 58mm</span>
+    <div class="short-strip" style="width: 64mm; height: 22mm;">
+      <span>22mm × 64mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 64mm; height: 15mm;">
+      <span>15mm × 64mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 64mm; height: 15mm;">
+      <span>15mm × 64mm</span>
     </div>
 
   </div>
@@ -297,13 +317,13 @@
        total used width = 100mm
        designed to prioritize full-length vertical washi on left half of page
   -->
-  <div class="washi-column" style="z-index:2;">
-    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
-    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
-    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
-    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
-    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
-    <div class="washi-strip"><span>15mm × 250mm (B5 Height)</span></div>
+  <div class="washi-column" style="z-index:2; height:210mm;">
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
   </div>
 
   <!-- RIGHT SIDE VARIANT -->
@@ -331,31 +351,39 @@
       </div>
     </div>
 
-    <div class="short-strip" style="width: 57mm; height: 30mm;">
-      <span>30mm × 58mm</span>
+    <div class="short-strip" style="width: 64mm; height: 30mm;">
+      <span>30mm × 64mm</span>
     </div>
 
-    <div class="short-strip" style="width: 57mm; height: 22mm;">
-      <span>22mm × 58mm</span>
+    <div class="short-strip" style="width: 64mm; height: 30mm;">
+      <span>30mm × 64mm</span>
     </div>
 
-    <div class="short-strip" style="width: 57mm; height: 22mm;">
-      <span>22mm × 58mm</span>
+    <div class="short-strip" style="width: 64mm; height: 22mm;">
+      <span>22mm × 64mm</span>
     </div>
 
-    <div style="display:flex; gap:2mm; margin-top:4mm;">
-      <div class="short-strip" style="width:18mm; height:15mm; margin:0;">
-        <span>15mm</span>
-      </div>
-
-      <div class="short-strip" style="width:18mm; height:15mm; margin:0;">
-        <span>15mm</span>
-      </div>
-
-      <div class="short-strip" style="width:18mm; height:15mm; margin:0;">
-        <span>15mm</span>
-      </div>
+    <div class="short-strip" style="width: 64mm; height: 22mm;">
+      <span>22mm × 64mm</span>
     </div>
+
+    <div class="short-strip" style="width: 64mm; height: 22mm;">
+      <span>22mm × 64mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 64mm; height: 22mm;">
+      <span>22mm × 64mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 64mm; height: 10mm;">
+      <span>10mm × 64mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 64mm; height: 10mm;">
+      <span>10mm × 64mm</span>
+    </div>
+
+  </div>
 
   </div>
 </div>
