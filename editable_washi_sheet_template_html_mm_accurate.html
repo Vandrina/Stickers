@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Washi Sheet Template</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    padding: 20px;
+  }
+
+  .page {
+    position: relative;
+    width: 215.9mm;
+    height: 279.4mm;
+    background: white;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 0 12px rgba(0,0,0,0.12);
+    overflow: hidden;
+  }
+
+  /* Final trim area */
+  .trim {
+    position: absolute;
+    left: 16.95mm;
+    top: 11.2mm;
+    width: 182mm;
+    height: 257mm;
+    border: 1px dashed #8f68d8;
+    box-sizing: border-box;
+  }
+
+  .label {
+    position: absolute;
+    font-size: 3.5mm;
+    color: #333;
+  }
+
+  .crop {
+    position: absolute;
+    width: 6mm;
+    height: 6mm;
+  }
+
+  .crop::before,
+  .crop::after {
+    content: "";
+    position: absolute;
+    background: #444;
+  }
+
+  .crop::before {
+    width: 6mm;
+    height: 0.3mm;
+  }
+
+  .crop::after {
+    width: 0.3mm;
+    height: 6mm;
+  }
+
+  .tl { top: 6mm; left: 6mm; }
+  .tr { top: 6mm; right: 6mm; transform: scaleX(-1); }
+  .bl { bottom: 6mm; left: 6mm; transform: scaleY(-1); }
+  .br { bottom: 6mm; right: 6mm; transform: scale(-1); }
+
+  .washi-column {
+    position: absolute;
+    left: 22mm;
+    top: 18mm;
+    width: 102mm;
+    height: 250mm;
+    display: flex;
+    gap: 2mm;
+  }
+
+  .washi-strip {
+    width: 15mm;
+    height: 250mm;
+    background: #ece9f6;
+    border: 0.3mm solid #c9c3dc;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .washi-strip span {
+    position: absolute;
+    bottom: 4mm;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    font-size: 2.8mm;
+    color: #444;
+    white-space: nowrap;
+  }
+
+  .right-panel {
+    position: absolute;
+    left: 132mm;
+    top: 18mm;
+    width: 58mm;
+    height: 250mm;
+  }
+
+  .tab-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 30mm);
+    gap: 4mm;
+    justify-content: start;
+    margin-bottom: 8mm;
+  }
+
+  .tab {
+    width: 30mm;
+    height: 30mm;
+    background: #ece9f6;
+    border: 0.3mm solid #c9c3dc;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .score {
+    position: absolute;
+    left: 15mm;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-left: 0.3mm dashed #666;
+  }
+
+  .tab-label {
+    position: absolute;
+    bottom: 2mm;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5mm;
+  }
+
+  .short-strip {
+    background: #ece9f6;
+    border: 0.3mm solid #c9c3dc;
+    margin-bottom: 3mm;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .short-strip span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5mm;
+    color: #444;
+  }
+
+  .page-title {
+    position: absolute;
+    top: 3mm;
+    width: 100%;
+    text-align: center;
+    font-size: 4mm;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page">
+
+  <div class="page-title">WASHI SHEET TEMPLATE · PAGE 1</div>
+
+  <div class="crop tl"></div>
+  <div class="crop tr"></div>
+  <div class="crop bl"></div>
+  <div class="crop br"></div>
+
+  <div class="trim"></div>
+
+  <div class="label" style="top: 12mm; left: 18mm;">
+    FINAL CUT: 182mm × 257mm
+  </div>
+
+  <!-- FULL WASHI -->
+  <div class="washi-column">
+    <div class="washi-strip"><span>15mm × 250mm</span></div>
+    <div class="washi-strip"><span>15mm × 250mm</span></div>
+    <div class="washi-strip"><span>15mm × 250mm</span></div>
+    <div class="washi-strip"><span>15mm × 250mm</span></div>
+    <div class="washi-strip"><span>15mm × 250mm</span></div>
+    <div class="washi-strip"><span>15mm × 250mm</span></div>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="right-panel">
+
+    <div class="tab-grid">
+      <div class="tab">
+        <div class="score"></div>
+        <div class="tab-label">30mm × 30mm</div>
+      </div>
+
+      <div class="tab">
+        <div class="score"></div>
+        <div class="tab-label">30mm × 30mm</div>
+      </div>
+
+      <div class="tab">
+        <div class="score"></div>
+        <div class="tab-label">30mm × 30mm</div>
+      </div>
+
+      <div class="tab">
+        <div class="score"></div>
+        <div class="tab-label">30mm × 30mm</div>
+      </div>
+    </div>
+
+    <div class="short-strip" style="width: 58mm; height: 30mm;">
+      <span>30mm × 58mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 58mm; height: 22mm;">
+      <span>22mm × 58mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 58mm; height: 15mm;">
+      <span>15mm × 58mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 58mm; height: 10mm;">
+      <span>10mm × 58mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 58mm; height: 8mm;">
+      <span>8mm × 58mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 58mm; height: 5mm;">
+      <span>5mm × 58mm</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+
+  <div class="page-title">WASHI SHEET TEMPLATE · PAGE 2</div>
+
+  <div class="crop tl"></div>
+  <div class="crop tr"></div>
+  <div class="crop bl"></div>
+  <div class="crop br"></div>
+
+  <div class="trim"></div>
+
+  <div class="label" style="top: 12mm; left: 18mm;">
+    FINAL CUT: 182mm × 257mm
+  </div>
+
+  <!-- FULL WASHI -->
+  <div class="washi-column">
+    <div class="washi-strip"><span>15mm × 250mm</span></div>
+    <div class="washi-strip"><span>15mm × 250mm</span></div>
+    <div class="washi-strip"><span>15mm × 250mm</span></div>
+    <div class="washi-strip"><span>15mm × 250mm</span></div>
+    <div class="washi-strip"><span>15mm × 250mm</span></div>
+    <div class="washi-strip"><span>15mm × 250mm</span></div>
+  </div>
+
+  <!-- RIGHT SIDE VARIANT -->
+  <div class="right-panel">
+
+    <div class="tab-grid">
+      <div class="tab">
+        <div class="score"></div>
+        <div class="tab-label">30mm × 30mm</div>
+      </div>
+
+      <div class="tab">
+        <div class="score"></div>
+        <div class="tab-label">30mm × 30mm</div>
+      </div>
+
+      <div class="tab">
+        <div class="score"></div>
+        <div class="tab-label">30mm × 30mm</div>
+      </div>
+
+      <div class="tab">
+        <div class="score"></div>
+        <div class="tab-label">30mm × 30mm</div>
+      </div>
+    </div>
+
+    <div class="short-strip" style="width: 58mm; height: 30mm;">
+      <span>30mm × 58mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 58mm; height: 22mm;">
+      <span>22mm × 58mm</span>
+    </div>
+
+    <div class="short-strip" style="width: 58mm; height: 8mm;">
+      <span>8mm × 58mm</span>
+    </div>
+
+    <div style="display:flex; gap:2mm; margin-top:4mm;">
+      <div class="short-strip" style="width:18mm; height:15mm; margin:0;">
+        <span>15mm</span>
+      </div>
+
+      <div class="short-strip" style="width:18mm; height:15mm; margin:0;">
+        <span>15mm</span>
+      </div>
+
+      <div class="short-strip" style="width:18mm; height:15mm; margin:0;">
+        <span>15mm</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
