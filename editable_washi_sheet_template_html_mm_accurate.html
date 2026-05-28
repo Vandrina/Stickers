@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Washi Sheet Template</title>
+<title>Washi Sheet Template - Letter Size</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -25,11 +25,10 @@
   /* Final trim area */
   .trim {
     position: absolute;
-    /* centered oversized-B5 cut area INSIDE letter sheet */
-    left: 16.95mm;
-    top: 11.2mm;
-    width: 182mm;
-    height: 257mm;
+    left: 10mm;
+    top: 15mm;
+    width: 151mm;
+    height: 220mm;
     border: 1mm dashed #8f68d8;
     box-sizing: border-box;
   }
@@ -70,17 +69,17 @@
 
   .washi-column {
     position: absolute;
-    left: 22mm;
-    top: 18mm;
+    left: 15mm;
+    top: 20mm;
     width: 102mm;
-    height: 210mm; /* reduced washi height */
+    height: 210mm;
     display: flex;
-    gap: 2mm;
+    gap: 4mm;
   }
 
   .washi-strip {
     width: 15mm;
-    height: 210mm; /* reduced washi height */
+    height: 210mm;
     background: #ece9f6;
     border: 0.3mm solid #c9c3dc;
     box-sizing: border-box;
@@ -89,7 +88,7 @@
 
   .washi-strip span {
     position: absolute;
-    bottom: 4mm;
+    bottom: 20mm;
     left: 50%;
     transform: translateX(-50%) rotate(-90deg);
     font-size: 2.8mm;
@@ -99,10 +98,10 @@
 
   .right-panel {
     position: absolute;
-    left: 128mm;
+    left: 92mm;
     top: 18mm;
     width: 64mm;
-    height: 210mm; /* reduced washi height */
+    height: 210mm; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -113,7 +112,7 @@
   .tab-grid {
     display: grid;
     grid-template-columns: repeat(2, 30mm);
-    gap: 3mm;
+    gap: 4mm;
     justify-content: start;
     width: 64mm;
     box-sizing: border-box;
@@ -139,7 +138,7 @@
 
   .tab-label {
     position: absolute;
-    bottom: 2mm;
+    bottom: 14mm;
     width: 100%;
     text-align: center;
     font-size: 2.5mm;
@@ -192,16 +191,7 @@
 
   <div class="trim"></div>
 
-  <!-- FULL WASHI
-       6 strips × 15mm wide
-       5 gaps × 2mm
-       total used width = 100mm
-       visual width ratio confirmed against 30mm tabs and 64mm short strips
-       designed to prioritize full-length vertical washi on left half of page
-  -->
   <div class="washi-column" style="z-index:2; height:210mm;">
-    <div class="washi-strip"><span>15mm × 210mm</span></div>
-    <div class="washi-strip"><span>15mm × 210mm</span></div>
     <div class="washi-strip"><span>15mm × 210mm</span></div>
     <div class="washi-strip"><span>15mm × 210mm</span></div>
     <div class="washi-strip"><span>15mm × 210mm</span></div>
@@ -209,7 +199,7 @@
   </div>
 
   <!-- RIGHT SIDE VARIANT -->
-  <div class="right-panel" style="z-index:2; top:28mm;">
+  <div class="right-panel" style="z-index:2; top:20mm;">
 
     <div class="tab-grid">
       <div class="tab">
