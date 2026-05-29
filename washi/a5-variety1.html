@@ -5,20 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Washi Sheet Template</title>
 <style>
-  @page {
-    size: 8.5in 11in;
-    margin: 0;
-  }
-
-  html {
-    margin: 0;
-    padding: 0;
-  }
-
   body {
     font-family: Arial, sans-serif;
     background: #f3f3f3;
-    margin: 0;
     padding: 20px;
   }
 
@@ -149,30 +138,8 @@
     top: 255mm;
     width: 100%;
     text-align: center;
-    font-size: 3.5mm;
+    font-size: 4mm;
     font-weight: bold;
-  }
-
-  @media print {
-    html,
-    body {
-      width: 215.9mm;
-      height: 279.4mm;
-      margin: 30px 0 0 30px;
-      padding: 0;
-      background: white;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-
-    .page {
-      margin: 0;
-      box-shadow: none;
-    }
-
-    .letter-border {
-      display: none;
-    }
   }
 </style>
 </head>
@@ -181,10 +148,10 @@
 <!-- SINGLE PAGE TEMPLATE -->
 <div class="page">
 
-  <div class="page-title">WASHI SHEET TEMPLATE <br> A5</div>
+  <div class="page-title" style="font-size:3.5mm;">WASHI SHEET TEMPLATE <br> A5</div>
 
   <!-- OUTER LETTER PAGE BORDER -->
-  <div class="letter-border" style="position:absolute; left:0; top:0; width:215.9mm; height:279.4mm; border:0.8mm solid #444; box-sizing:border-box; z-index:1;"></div>
+  <div style="position:absolute; left:0; top:0; width:215.9mm; height:279.4mm; border:0.8mm solid #444; box-sizing:border-box; z-index:1;"></div>
 
   <!-- FINAL CUT AREA -->
 
