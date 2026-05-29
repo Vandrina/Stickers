@@ -4,7 +4,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Washi Sheet Template</title>
-<style>
+<style>  @page {
+    size: letter;
+    margin: 0;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     font-family: Arial, sans-serif;
     background: #f3f3f3;
@@ -75,7 +85,19 @@
     font-size: 4mm;
     font-weight: bold;
   }
-</style>
+
+  @media print {
+    html,
+    body {
+      background: white;
+    }
+
+    .page {
+      margin: 0;
+      box-shadow: none;
+    }
+  }
+    </style>
 </head>
 <body>
 
