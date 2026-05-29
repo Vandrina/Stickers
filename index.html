@@ -3,65 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sticker Sheets Index</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      background: #f7f7f7;
-    }
 
-    h1 {
-      margin-bottom: 20px;
-    }
+  <title>Sticker Templates</title>
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 16px;
-    }
-
-    a.card {
-      display: block;
-      padding: 16px;
-      background: white;
-      border-radius: 10px;
-      text-decoration: none;
-      color: black;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      transition: transform 0.1s ease;
-    }
-
-    a.card:hover {
-      transform: translateY(-2px);
-    }
-
-    .title {
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-
-    .meta {
-      font-size: 12px;
-      opacity: 0.7;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/index.css" />
 </head>
 
 <body>
-  <h1>Sticker Sheet Index</h1>
+  <main class="page">
 
-  <div class="grid">
+    <header class="site-header">
+      <div class="eyebrow">Sticker Templates</div>
+      <h1>Template Index</h1>
+      <p class="intro">
+        Printable layout templates for standardized sticker sheets.
+        Open the PDF, place artwork over the guide, and preserve the sheet dimensions.
+      </p>
+    </header>
 
-    <a class="card" href="washi/A5-Washi-Sheet-Variety.pdf" target="blank" rel="noopener noreferrer">
-      <div class="title">A5 Washi Variety</div>
-      <div class="meta">PDF</div>
-    </a>
- <a class="card" href="washi/A5-Washi-Full-Height.pdf" target="blank" rel="noopener noreferrer">
-      <div class="title">A5 Washi Full Height</div>
-      <div class="meta">PDF</div>
-    </a>
-  </div>
+    <section class="section">
+      <h2 class="section-title">Washi</h2>
 
+      <div class="grid">
+        <a class="card" href="washi/a5-variety.pdf" target="_blank" rel="noopener noreferrer">
+          <span class="corner-bl"></span>
+          <span class="corner-br"></span>
+
+          <div class="card-meta">PDF · Letter Print</div>
+          <div class="card-title">A5 Variety Washi</div>
+          <p class="card-description">
+            Mixed washi strip layout placed on Letter paper for printing.
+          </p>
+          <div class="card-action">Open PDF</div>
+        </a>
+
+        <a class="card" href="washi/a5-full-large.pdf" target="_blank" rel="noopener noreferrer">
+          <span class="corner-bl"></span>
+          <span class="corner-br"></span>
+
+          <div class="card-meta">PDF · Letter Print</div>
+          <div class="card-title">A5 Full Large Washi</div>
+          <p class="card-description">
+            Larger full-strip washi template placed on Letter paper for printing.
+          </p>
+          <div class="card-action">Open PDF</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Icons</h2>
+
+      <div class="empty-note">
+        Icon sheet templates can go here later.
+      </div>
+    </section>
+
+    <footer class="footer">
+      Template archive
+    </footer>
+
+  </main>
 </body>
 </html>
