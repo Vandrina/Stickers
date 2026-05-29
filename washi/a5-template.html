@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>A5 Variety Washi Template</title>
+
+  <style>
+    @page {
+      size: letter;
+      margin: 0;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #cfcfcf;
+      font-family: Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* LETTER PAPER */
+
+    .print-page {
+      position: relative;
+      width: 215.9mm;
+      height: 279.4mm;
+      margin: 0 auto;
+      background: white;
+      overflow: hidden;
+    }
+
+    /* A5 WORK AREA */
+
+    .sheet-area {
+      position: absolute;
+      width: 148mm;
+      height: 210mm;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      border: 0.4mm dashed #999;
+    }
+
+    /* MAIN CONTENT COLUMN */
+
+    .layout-column {
+      position: absolute;
+      top: 6mm;
+      left: 6mm;
+
+      width: calc(100% - 12mm);
+      height: calc(100% - 12mm);
+
+      display: flex;
+      flex-direction: column;
+      gap: 3mm;
+    }
+
+    /* WASHI STRIPS */
+
+    .washi-strip {
+      border: 0.3mm solid black;
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .strip-15 {
+      height: 15mm;
+    }
+
+    .strip-20 {
+      height: 20mm;
+    }
+
+    .strip-30 {
+      height: 30mm;
+    }
+
+    /* HALF WIDTH ROW */
+
+    .half-row {
+      display: flex;
+      gap: 3mm;
+      width: 100%;
+    }
+
+    .half-strip {
+      flex: 1;
+      border: 0.3mm solid black;
+      height: 30mm;
+    }
+
+    /* OPTIONAL LABEL */
+
+    .template-label {
+      position: absolute;
+      bottom: 3mm;
+      right: 4mm;
+
+      font-size: 3mm;
+      color: #999;
+      letter-spacing: 0.05em;
+    }
+
+    /* PRINT CLEANUP */
+
+    @media print {
+      html,
+      body {
+        background: white;
+      }
+
+      .print-page {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="print-page">
+
+    <div class="sheet-area">
+
+      <div class="layout-column">
+
+        <!-- LONG WASHI -->
+
+        <div class="washi-strip strip-15"></div>
+
+        <div class="washi-strip strip-20"></div>
+
+        <div class="washi-strip strip-20"></div>
+
+        <!-- HALF STRIPS -->
+
+        <div class="half-row">
+          <div class="half-strip"></div>
+          <div class="half-strip"></div>
+        </div>
+
+        <!-- FULL WIDTH -->
+
+        <div class="washi-strip strip-30"></div>
+
+        <div class="washi-strip strip-30"></div>
+
+      </div>
+
+      <div class="template-label">
+        A5 Variety Washi Template
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
