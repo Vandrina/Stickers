@@ -24,13 +24,14 @@
 
   .page {
     position: relative;
-    width: 215.9mm;
-    height: 279.4mm;
+    width: 8.5in;
+    height: 11in;
     background: white;
     margin: 0 auto 40px auto;
     box-shadow: 0 0 12px rgba(0,0,0,0.12);
     overflow: hidden;
     box-sizing: border-box;
+    zoom: 115%;
   }
 
   /* Final trim area */
@@ -155,20 +156,21 @@
 
   @media print {
     html,
-    page-title,
     body {
-      width: 215.9mm;
-      height: 279.4mm;
+      width: 8.5in;
+      height: 11in;
       margin: 30px 0 0 30px;
       padding: 0;
       background: white;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
+      zoom: 115%;
     }
 
     .page {
       margin: 0;
       box-shadow: none;
+      
     }
 
     .letter-border {
@@ -184,7 +186,7 @@
 
 
   <!-- OUTER LETTER PAGE BORDER -->
-  <div class="letter-border" style="position:absolute; left:0; top:0; width:215.9mm; height:279.4mm; border:0.8mm solid #444; box-sizing:border-box; z-index:1;"></div>
+  <div class="letter-border" style="position:absolute; left:0; top:0; width:8.5in; height:11in; border:0.8mm solid #444; box-sizing:border-box; z-index:1;"></div>
 
   <!-- FINAL CUT AREA -->
 
@@ -245,7 +247,7 @@
     </div>
 
     <div class="short-strip" style="width: 64mm; height: 22mm; text-align: center; font-weight: bold; background: none; border: none;">
-      <span>WASHI SHEET TEMPLATE <br> A5</span>
+      <span>WASHI SHEET VARIETY <br> A5</span>
     </div>
 
     
