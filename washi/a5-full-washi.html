@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Washi Sheet Template</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    padding: 20px;
+  }
+
+  .page {
+    position: relative;
+    width: 215.9mm;
+    height: 279.4mm;
+    background: white;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 0 12px rgba(0,0,0,0.12);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  /* Final trim area */
+  .trim {
+    position: absolute;
+    left: 10mm;
+    top: 15mm;
+    width: 151mm;
+    height: 220mm;
+    border: 1mm dashed #8f68d8;
+    box-sizing: border-box;
+  }
+
+  .label {
+    position: absolute;
+    font-size: 3.5mm;
+    color: #333;
+  }
+
+  .washi-column {
+    position: absolute;
+    left: 13mm;
+    top: 20mm;
+    height: 210mm;
+    display: flex;
+    gap: 3.5mm;
+  }
+
+  .washi-strip {
+    width: 15mm;
+    height: 210mm;
+    background: #ece9f6;
+    border: 0.3mm solid #c9c3dc;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .washi-strip span {
+    position: absolute;
+    bottom: 20mm;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    font-size: 2.8mm;
+    color: #444;
+    white-space: nowrap;
+  }
+
+  .page-title {
+    position: absolute;
+    top: 255mm;
+    width: 100%;
+    text-align: center;
+    font-size: 4mm;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<!-- SINGLE PAGE TEMPLATE -->
+<div class="page">
+
+  <div class="page-title" style="font-size:3.5mm;">WASHI SHEET TEMPLATE <br> A5</div>
+
+  <!-- OUTER LETTER PAGE BORDER -->
+  <div style="position:absolute; left:0; top:0; width:215.9mm; height:279.4mm; border:0.8mm solid #444; box-sizing:border-box; z-index:1;"></div>
+
+  <!-- FINAL CUT AREA -->
+
+
+
+  <div class="trim"></div>
+
+  <div class="washi-column" style="z-index:2; height:210mm;">
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+    <div class="washi-strip"><span>15mm × 210mm</span></div>
+  </div>
+
+  </div>
+</div>
+
+</body>
+</html>
