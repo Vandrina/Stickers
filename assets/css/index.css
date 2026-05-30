@@ -1,6 +1,5 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/im-fell-english@5/index.css');
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/metamorphous@5/index.css');
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/new-rocker@5/index.css');
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/medievalsharp@5/index.css');
 
 :root {
   --bg: #191a1c;
@@ -19,10 +18,8 @@
   --gold-line: #c8a45a28;
   --gold-edge: #302810;
 
-  --serif: Georgia, serif;
+  --serif: 'IM Fell English', Georgia, serif;
   --display: 'Metamorphous', Georgia, serif;
-  --accent-display: 'New Rocker', 'Metamorphous', Georgia, serif;
-  --hand-display: 'MedievalSharp', Georgia, serif;
   --mono: 'Courier New', ui-monospace, monospace;
 
   --page-max: 980px;
@@ -166,7 +163,8 @@ h1 {
 }
 
 .title {
-  font-family: var(--hand-display);
+  font-family: var(--serif);
+  font-style: italic;
   color: var(--ink-bright);
   font-size: 22px;
   line-height: 1.15;
