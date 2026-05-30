@@ -1,3 +1,7 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metamorphous@5/index.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/new-rocker@5/index.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/medievalsharp@5/index.css');
+
 :root {
   --bg: #191a1c;
   --bg-panel: #1d1d1f;
@@ -15,8 +19,11 @@
   --gold-line: #c8a45a28;
   --gold-edge: #302810;
 
-  --mono: "Courier New", ui-monospace, monospace;
   --serif: Georgia, serif;
+  --display: 'Metamorphous', Georgia, serif;
+  --accent-display: 'New Rocker', 'Metamorphous', Georgia, serif;
+  --hand-display: 'MedievalSharp', Georgia, serif;
+  --mono: 'Courier New', ui-monospace, monospace;
 
   --page-max: 980px;
 }
@@ -61,9 +68,11 @@ body {
 }
 
 h1 {
-  font-size: clamp(34px, 6vw, 62px);
+  font-family: var(--display);
+  font-size: clamp(42px, 7vw, 76px);
   line-height: 1.05;
-  font-weight: normal;
+  font-weight: 400;
+  letter-spacing: 0.015em;
   color: var(--ink);
 }
 
@@ -73,6 +82,7 @@ h1 {
   color: var(--body-soft);
   font-size: 15px;
   line-height: 1.7;
+  font-style: italic;
 }
 
 .section {
@@ -156,9 +166,11 @@ h1 {
 }
 
 .title {
+  font-family: var(--hand-display);
   color: var(--ink-bright);
-  font-size: 18px;
-  font-style: italic;
+  font-size: 22px;
+  line-height: 1.15;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
@@ -205,6 +217,10 @@ h1 {
 @media (max-width: 600px) {
   body {
     padding: 34px 18px 56px;
+  }
+
+  h1 {
+    font-size: clamp(38px, 13vw, 58px);
   }
 
   .card {
